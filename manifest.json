@@ -1,9 +1,12 @@
 {
     "name": "Magic Cart",
     "manifest_version": 2,
-    "version": "0.4",
+    "version": "1.0.2",
     "description": "add missing add to cart button",
-    "permissions": [],
+    "permissions": [
+        "webRequest",
+        "*://*.amd.com/"
+    ],
     "icons": {
         "128": "icons/icon_128.png"
     },
@@ -17,5 +20,9 @@
             ],
             "run_at": "document_end"
         }
-    ]
+    ],
+    "background": {
+        "scripts": ["bg.js"],
+        "persistent": true
+    }
 }
